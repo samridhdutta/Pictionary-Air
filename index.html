@@ -36,7 +36,16 @@
   <script>
   (()=>{
     const PREFIX='pictionary-air-';
-    const WORDS=['Rocket ship','Dancing penguin','Birthday cake','Sleeping cat','Hot-air balloon','Robot chef','Treasure chest','Flying pizza','Surfing dinosaur','Haunted house','Superhero','Giant octopus'];
+    const WORDS=[
+      'Cat','Dog','Elephant','Giraffe','Lion','Tiger','Monkey','Panda','Koala','Kangaroo','Penguin','Dolphin','Whale','Shark','Octopus','Butterfly','Bee','Ladybug','Spider','Snake','Turtle','Frog','Crocodile','Owl','Eagle','Parrot','Flamingo','Peacock','Rabbit','Horse','Dinosaur',
+      'Apple','Banana','Watermelon','Pineapple','Strawberry','Grapes','Orange','Lemon','Carrot','Broccoli','Pizza','Hamburger','Hot dog','Taco','Sandwich','Cupcake','Ice cream','Popcorn','Donut','Cookie','Pancake','Spaghetti','Sushi','French fries','Birthday cake','Cheese',
+      'Pencil','Backpack','Umbrella','Toothbrush','Camera','Bicycle','Skateboard','Soccer ball','Basketball','Kite','Balloon','Guitar','Piano','Drum','Book','Clock','Lamp','Chair','Table','Bed','Sofa','Television','Computer','Phone','Robot','Rocket','Train','Airplane','Boat','Key','Scissors',
+      'School','Library','Playground','Zoo','Farm','Beach','Castle','Hospital','Fire station','Grocery store','Restaurant','Airport','Space','Aquarium','Mountain','Island','Desert','Forest','City','Amusement park',
+      'Sun','Moon','Star','Rainbow','Cloud','Lightning','Tornado','Snowman','Volcano','Waterfall','River','Ocean','Flower','Tree','Cactus','Mushroom','Leaf','Fire','Snowflake','Rainstorm',
+      'Dancing','Jumping','Running','Swimming','Flying','Sleeping','Laughing','Crying','Singing','Cooking','Reading','Painting','Fishing','Climbing','Skiing','Skating','Surfing','Bowling','Juggling','Sneezing','Brushing teeth','Riding a bicycle','Walking a dog','Opening a present','Blowing bubbles','Playing tennis','Kicking a ball','Doing a cartwheel','Washing a car','Building a snowman',
+      'Doctor','Firefighter','Police officer','Teacher','Chef','Astronaut','Pirate','Princess','King','Queen','Superhero','Wizard','Witch','Ninja','Cowboy','Clown','Detective','Scientist','Magician','Knight',
+      'Dancing penguin','Robot chef','Flying pizza','Surfing dinosaur','Giant octopus','Cat on a skateboard','Dog wearing glasses','Monkey eating a banana','Alien drinking juice','Dinosaur brushing its teeth','Bear playing guitar','Chicken driving a car','Frog wearing a crown','Shark at school','Ghost eating pizza','Snowman at the beach','Elephant on a bicycle','Rabbit flying a kite','Pirate taking a selfie','Superhero cooking spaghetti','Owl reading a book','Turtle racing a car','Penguin skiing','Octopus playing drums','Lion wearing pajamas','Unicorn dancing','Taco with a face','Hamburger with legs'
+    ];
     const COLORS=['#171629','#ff4f64','#2b59ff','#00a896','#ff9f1c','#ffffff'];
     const $=id=>document.getElementById(id), clamp=n=>Math.max(0,Math.min(1,n));
     let role=null,room='',peer=null,conn=null,mode='air',motion=false,color=COLORS[0],width=7,strokes=[],active=null,drawing=false,cursor={x:.5,y:.5},base=null,ends=0,timerId=null,wordDeck=[],previousWord='';
